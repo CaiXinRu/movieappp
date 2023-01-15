@@ -115,6 +115,23 @@ export default {
   //   }
   // },
   fetchDelay: 1000,
+  head() {
+    return {
+      title: 'Movie APP - Latest Streaming Movies Info',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Get all the latest streaming movies in theaters & online',
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: 'movies, stream, streaming',
+        },
+      ]
+    }
+  },
   methods: {
     async getMovies() {
       // this.loading = true
