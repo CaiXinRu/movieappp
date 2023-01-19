@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     <!-- Hero -->
     <MovieHero />
 
@@ -17,6 +17,7 @@
 
     <!-- Movies -->
     <div v-else class="container movies">
+
       <!-- Searched Movie -->
       <div v-if="searchInput !== ''" id="movie-grid" class="movies-grid">
         <div v-for="(movie, index) in searchedMovies" :key="index" class="movie">
@@ -45,6 +46,7 @@
           </div>
         </div>
       </div>
+
       <!-- Now Streaming -->
       <div v-else id="movie-grid" class="movies-grid">
         <div v-for="(movie, index) in movies" :key="index" class="movie">
@@ -74,7 +76,7 @@
         </div>
       </div>
     </div>
-
+    
   </div>
 
 </template>
@@ -178,7 +180,7 @@ export default {
     padding: 32px 16px;
 
     input {
-      max-width: 400px;
+      // max-width: 1500px;
       width: 100%;
       padding: 12px 6px;
       font-size: 14px;
